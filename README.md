@@ -1,7 +1,7 @@
 # New Relic Synthetics Web extension
 New Relic Synthetics formatter for Selenium IDE code export.
 
-##How to use ?
+## How to use ?
 1. Install the [Selenium IDE web extension](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd).
 2. Install this web extension.
 3. Start the Selenium IDE and start recording or load an existing project
@@ -12,7 +12,7 @@ For details on how to record and export test and test suite refer to the [Seleni
 This project was created using [Selenium-IDE boiler plate](https://github.com/SeleniumHQ/selenium-ide/tree/v3/packages/extension-boilerplate)
 
 
-##How to build?
+## How to build?
 
 1.) install node modules
 ```$xslt
