@@ -1,0 +1,181 @@
+{
+  "id": "01c2ee39-d157-4414-87c9-7903fd810827",
+  "version": "2.0",
+  "name": "Proj1",
+  "url": "https://www.newrelic.com",
+  "tests": [{
+    "id": "01ac2e2e-fc51-4993-b1d1-dcd6594f6f1a",
+    "name": "Check Drop Down",
+    "commands": [{
+      "id": "66578d64-323a-4161-add1-328a95c6a5d4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c30759c5-611e-423d-b6b0-d02d062edd2a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1546x924",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3706dfad-1564-4a25-afcb-ba820ff5d699",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav0 > .title",
+      "targets": [
+        ["css=#nav0 > .title", "css:finder"],
+        ["xpath=//div[@id='nav0']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'WHY NEW RELIC')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "589bcdb3-67b4-4660-bb3b-a077f58dd041",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav0_slide .col-md-3:nth-child(1) .title",
+      "targets": [
+        ["css=#nav0_slide .col-md-3:nth-child(1) .title", "css:finder"],
+        ["xpath=//nav[@id='nav0_slide']/div/div/div/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Our Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f7d0b72-e832-41b6-bf3d-87e18269bcbf",
+      "comment": "",
+      "command": "click",
+      "target": "id=geo",
+      "targets": [
+        ["id=geo", "id"],
+        ["css=#geo", "css:finder"],
+        ["xpath=//select[@id='geo']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div[2]/section/div/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ad2ccff-2f2d-4130-84d4-3ca272e31d21",
+      "comment": "",
+      "command": "select",
+      "target": "id=geo",
+      "targets": [],
+      "value": "label=North America"
+    }, {
+      "id": "7e8c8b4f-4502-4886-9482-e65c33fa8b89",
+      "comment": "",
+      "command": "click",
+      "target": "id=pro",
+      "targets": [
+        ["id=pro", "id"],
+        ["css=#pro", "css:finder"],
+        ["xpath=//select[@id='pro']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div[2]/section/div/div/div/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f223f3be-d83a-4d50-8338-b5f44dc29d00",
+      "comment": "",
+      "command": "select",
+      "target": "id=pro",
+      "targets": [],
+      "value": "label=APM"
+    }, {
+      "id": "aab5980b-d9f8-4af7-8e28-821d2a71a599",
+      "comment": "",
+      "command": "click",
+      "target": "id=ind",
+      "targets": [
+        ["id=ind", "id"],
+        ["css=#ind", "css:finder"],
+        ["xpath=//select[@id='ind']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div[2]/section/div/div/div/div[3]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9157d1a-aac8-42ea-a7ee-e9706e75ae43",
+      "comment": "",
+      "command": "select",
+      "target": "id=ind",
+      "targets": [],
+      "value": "label=Media"
+    }, {
+      "id": "31fdc7d6-7caa-4ae8-a741-6329194ca4d4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "547ed3f2-504e-477b-a5dc-4148abeada49",
+    "name": "Check Pricing",
+    "commands": [{
+      "id": "12e5ba03-a855-4ea0-bce0-156026771fb1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f74248c-2a59-4962-b254-db8559976e41",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1258x815",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb657e39-9dec-4d80-affb-1f36b8d1ffbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav1 > .title",
+      "targets": [
+        ["css=#nav1 > .title", "css:finder"],
+        ["xpath=//div[@id='nav1']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'PRODUCTS & PRICING')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f98e263c-7650-4894-8f26-872f2e76a01d",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .col-md-3:nth-child(2) img",
+      "targets": [
+        ["css=div:nth-child(1) > .col-md-3:nth-child(2) img", "css:finder"],
+        ["xpath=//nav[@id='nav1_slide']/div/div/div[2]/div/div/a/span/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "465ecde8-09af-44e7-bc13-8e205e636f94",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pricing",
+      "targets": [
+        ["linkText=Pricing", "linkText"],
+        ["css=.nav-subnav-inner li:nth-child(3) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Pricing')])[4]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div/nav/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://newrelic.com/application-monitoring/pricing')])[2]", "xpath:href"],
+        ["xpath=//nav/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9c9fef7b-f613-49d3-97a5-9c40c60598e8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01ac2e2e-fc51-4993-b1d1-dcd6594f6f1a", "547ed3f2-504e-477b-a5dc-4148abeada49"]
+  }],
+  "urls": ["https://www.newrelic.com/"],
+  "plugins": []
+}
