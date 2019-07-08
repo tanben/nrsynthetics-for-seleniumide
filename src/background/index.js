@@ -41,20 +41,6 @@ browser.runtime.onMessageExternal.addListener(   (message, sender, sendResponse)
   }
 });
 
-
-
-
-
-function register(){
-  browser.runtime.sendMessage(chromeID, {
-    uri: "/register",
-    verb: "post",
-    payload
-  }).catch(console.error);
-
-}
-
-
 function parseMessage(message){
   let data= message.options
   data.baseUrl=  message.options.url
@@ -78,7 +64,6 @@ function startPolling(payload, cb) {
           verb: "post",
           payload
         }).then(() => {
-          console.log("registered");
           cb();
         });
       } else if (res.error) {

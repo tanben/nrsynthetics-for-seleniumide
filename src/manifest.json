@@ -2,8 +2,8 @@
   "description": "New Relic Synthetics Formatter for Selenium IDE",
   "manifest_version": 2,
   "name": "New Relic Selenium IDE plugin",
-  "version": "0.2.1",
-  "version_name": "0.2.1",
+  "version": "0.2.3",
+  "version_name": "0.2.3",
   "homepage_url": "https://github.com/tanben/syntheticsformatter-for-seleniumide",
   "icons": {
     "16": "icons/nr16.png",
@@ -12,7 +12,7 @@
     "54": "icons/nr56.png"
   },
   "permissions": [
-    "activeTab"
+    "alarms"
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "content_scripts": [
