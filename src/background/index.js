@@ -18,14 +18,15 @@
 import browser from "webextension-polyfill";
 const  codeExport = require('code-export-node-nr-synthetics')
 
-
+const CODE_VERSION =process.env.CODE_VERSION
 const chromeID=process.env.SIDE_ID;
+
 var interval;
 
 
 const payload= {
     name: "New Relic Selenium IDE plugin",
-    version: "1.0.0",
+    version: CODE_VERSION,
     exports:{vendor:[{"nrsynthetics":"New Relic Synthetics"}]}
   }
 
@@ -37,8 +38,18 @@ browser.runtime.onMessageExternal.addListener(   (message, sender, sendResponse)
   if (message.action === 'export') {
     let funcExport = (typeof message.options.suite != 'undefined')?codeExport.emitSuite : codeExport.emitTest
     funcExport(parseMessage(message)).then( sendResponse)
-    return true
+  }else{
+      sendResponse({
+          status: true,
+          payload: {
+              content : 'Invalid capability ID',
+              extension : 'txt',
+              mimetype :'text/plain'
+          }
+      });
   }
+    return true
+
 });
 
 function parseMessage(message){
