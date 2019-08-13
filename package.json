@@ -1,7 +1,8 @@
 {
   "name": "syntheticsformatter-for-seleniumide",
-  "version": "1.0.1",
-  "repository": "git@github.com:tanben/syntheticsformatter-for-seleniumide.git",
+  "version": "1.0.2",
+  "description": "Synthetics Formatter for Selenium IDE",
+  "repository": "git@github.com:tanben/nrsynthetics-for-seleniumide.git",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
@@ -18,33 +19,32 @@
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "autoprefixer": "^7.1.4",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.0.1",
-    "autoprefixer": "^7.1.4",
     "css-loader": "^1.0.0",
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-jest": "^21.27.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.30.1",
     "jest-dom": "^1.3.1",
+    "mem": ">=4.0.0",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "url-loader": "^1.0.0",
-    "webpack": "^3.5.6",
-    "mem": ">=4.0.0"
+    "webpack": "^3.12.0",
+    "webpack-version-file-plugin": "^0.4.0"
   },
   "dependencies": {
-    "webextension-polyfill": "https://github.com/corevo/webextension-polyfill#2cc27453b501e4426eb6741943fbb4041c0d18f5",
-    "code-export-node-nr-synthetics": "tanben/code-export-node-nr-synthetics"
+    "code-export-node-nr-synthetics": "tanben/code-export-node-nr-synthetics",
+    "webextension-polyfill": "https://github.com/corevo/webextension-polyfill#2cc27453b501e4426eb6741943fbb4041c0d18f5"
   }
 }
