@@ -17,10 +17,8 @@
 
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const VersionFilePlugin = require('webpack-version-file-plugin');
 const autoprefixer = require('autoprefixer')
 const packageVersion = require("./package.json").version;
 
@@ -80,42 +78,7 @@ module.exports = {
               }
             ]
           },
-          // Process css
-          {
-            test: /\.css$/,
-            loader: [
-              require.resolve("style-loader"),
-              {
-                loader: require.resolve("css-loader"),
-                options: {
-                  importLoaders: 1
-                }
-              },
-              {
-                loader: require.resolve("postcss-loader"),
-                options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: "postcss",
-                  plugins: () => [
-                    require("postcss-flexbugs-fixes"),
-                    autoprefixer({
-                      browsers: [
-                        ">1%",
-                        "last 4 versions",
-                        "Firefox ESR",
-                        "not ie < 9" // React doesn't support IE8 anyway
-                      ],
-                      flexbox: "no-2009"
-                    })
-                  ]
-                }
-              }
-            ]
 
-
-            // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
-          },
           // Process markdown to string, to be included inside the bundle, instead of as file
           {
             test: /\.md$/,
@@ -145,9 +108,16 @@ module.exports = {
   plugins: [
 
         new webpack.NamedModulesPlugin(),
-        // Copy non-umd assets to vendor
+
+        new VersionFilePlugin({
+            packageFile: path.resolve(__dirname, './package.json'),
+            template: path.resolve(__dirname, './src/manifest.json'),
+            outputFile: path.resolve(__dirname, './build/manifest.json')
+        }),
+
+
+      // Copy non-umd assets to vendor
         new CopyWebpackPlugin([
-          { from: "manifest.json", to: "../" },
           { from: "icons", to: "../icons" }
         ]),
         // Makes some environment variables available to the JS code, for example:
@@ -161,10 +131,7 @@ module.exports = {
 
           }
         }),
-        // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-        new ExtractTextPlugin({
-          filename: "css/[name].[hash:8].css"
-        }),
+
         // Moment.js is an extremely popular library that bundles large locale files
         // by default due to how Webpack interprets its code. This is a practical
         // solution that requires the user to opt into importing specific locales.
