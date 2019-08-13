@@ -1,7 +1,7 @@
 {
   "description": "New Relic Synthetics Formatter for Selenium IDE",
   "manifest_version": 2,
-  "name": "New Relic Synthetics Formatter for Selenium IDE",
+  "name": "Synthetics Formatter for Selenium IDE",
   "version": "<%= package.version %>",
   "version_name": "<%= package.version %>",
   "description": "<%= package.description %>",
