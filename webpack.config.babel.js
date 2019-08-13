@@ -22,6 +22,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const packageVersion = require("./package.json").version;
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -155,7 +156,9 @@ module.exports = {
         new webpack.DefinePlugin({
           "process.env": {
             "NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-            "SIDE_ID": JSON.stringify(process.env.SIDE_ID)
+            "SIDE_ID": JSON.stringify('mooikfkahbdckldjjndioackbalphokd'),
+            "CODE_VERSION": JSON.stringify(packageVersion)
+
           }
         }),
         // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.

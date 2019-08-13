@@ -1,6 +1,6 @@
 {
   "name": "syntheticsformatter-for-seleniumide",
-  "version": "0.2.5",
+  "version": "1.0.1",
   "repository": "git@github.com:tanben/syntheticsformatter-for-seleniumide.git",
   "license": "Apache-2.0",
   "private": true,
