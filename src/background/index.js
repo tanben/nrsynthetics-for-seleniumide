@@ -34,10 +34,11 @@ const payload= {
 startPolling(payload, _=>{})
 
 browser.runtime.onMessageExternal.addListener(   (message, sender, sendResponse) => {
-
   if (message.action === 'export') {
     let funcExport = (typeof message.options.suite != 'undefined')?codeExport.emitSuite : codeExport.emitTest
-    funcExport(parseMessage(message)).then( sendResponse)
+    funcExport(parseMessage(message)).then(data=>{
+        return sendResponse(data)
+    } )
   }else{
       sendResponse({
           status: true,
@@ -48,8 +49,6 @@ browser.runtime.onMessageExternal.addListener(   (message, sender, sendResponse)
           }
       });
   }
-    return true
-
 });
 
 function parseMessage(message){
