@@ -1,6 +1,6 @@
 {
   "name": "syntheticsformatter-for-seleniumide",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Synthetics Formatter for Selenium IDE",
   "repository": "git@github.com:tanben/nrsynthetics-for-seleniumide.git",
   "license": "Apache-2.0",
