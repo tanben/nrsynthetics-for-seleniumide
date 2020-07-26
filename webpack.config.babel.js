@@ -45,47 +45,7 @@ module.exports = {
     extensions: ['.js', '.json'],
 
   },
-  module: {
-    rules: [
-      {
-        oneOf: [
-          {
-            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: 'media/[name].[hash:8].[ext]',
-            },
-          },
-
-          // Process JS with Babel.
-          {
-            test: /\.(jsx?)$/,
-            include: [
-              path.resolve(__dirname, "src")
-            ],
-            use: [
-              {
-                loader: "babel-loader",
-                options: {
-                  compact: true
-                }
-              }
-            ]
-          },
-
-          {
-            loader: 'file-loader',
-            exclude: [/\.jsx?$/, /\.html$/, /\.json$/],
-            options: {
-              name: 'media/[name].[hash:8].[ext]',
-            },
-          },
-        ],
-      },
-    ],
-  },
-  plugins: [
+    plugins: [
 
         new webpack.NamedModulesPlugin(),
 
@@ -96,9 +56,14 @@ module.exports = {
         }),
 
 
-        new CopyWebpackPlugin([
-          { from: "icons", to: "../icons" }
-        ]),
+        new CopyWebpackPlugin(
+          {
+            patterns:[
+              { from: "icons", to: "../icons" }
+            ]
+          }
+          
+        ),
         new webpack.DefinePlugin({
           "process.env": {
             "NODE_ENV": JSON.stringify(process.env.NODE_ENV),
