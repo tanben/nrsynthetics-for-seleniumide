@@ -2,7 +2,6 @@ node_modules
 _MACOSX/
 .DS_Store
 build
-yarn-error.log
 
 .web-extension-id
 *.log
