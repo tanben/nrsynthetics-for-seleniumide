@@ -16,7 +16,7 @@
 // under the License.
 
 import browser from "webextension-polyfill";
-const  codeExport = require('code-export-node-nr-synthetics')
+const  codeExport = require('@tanben/code-export-node-nr-synthetics')
 
 const CODE_VERSION =process.env.CODE_VERSION
 const chromeID=process.env.SIDE_ID;

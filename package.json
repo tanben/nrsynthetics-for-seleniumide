@@ -1,14 +1,30 @@
 {
-"name": "syntheticsformatter-for-seleniumide",
-  "version": "1.0.6",
-  "description": "Synthetics Formatter for Selenium IDE",
-  "repository": "git@github.com:tanben/nrsynthetics-for-seleniumide.git",
+  "name": "@tanben/syntheticsformatter-for-seleniumide",
+  "version": "1.0.8",
+  "description": "Chrome extension for incorporating New Relic Synthetics exporter for Selenium IDE",
+  "repository": "git://github.com/tanben/nrsynthetics-for-seleniumide.git",
+  "author": {
+    "name": "Benedicto Tan",
+    "email": "ben.tan.dev@gmail.com",
+    "url": "https://github.com/tanben"
+  },
   "license": "Apache-2.0",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [
+    "formatter",
+    "synthetics",
+    "new relic",
+    "selenium ide"
+  ],
   "scripts": {
     "build": "rm -rf build && env NODE_ENV=production webpack",
     "build:dev": "webpack",
     "watch": "yarn build:dev -w"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
   },
   "jest": {
     "testMatch": [
@@ -45,7 +61,7 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "code-export-node-nr-synthetics": "tanben/code-export-node-nr-synthetics",
+    "@tanben/code-export-node-nr-synthetics": "^1.0.7",
     "webextension-polyfill": "https://github.com/corevo/webextension-polyfill#2cc27453b501e4426eb6741943fbb4041c0d18f5"
   }
 }

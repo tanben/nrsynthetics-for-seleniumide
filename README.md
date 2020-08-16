@@ -1,9 +1,9 @@
 # New Relic Synthetics Web extension
-New Relic Synthetics formatter for Selenium IDE code export.
 
+[![NPM](https://img.shields.io/badge/dynamic/json?color=red&label=NPM&query=engines.npm&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fnrsynthetics-for-seleniumide%2Fmaster%2Fpackage.json)]()
+ [![Version](https://img.shields.io/badge/dynamic/json?color=blue&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fnrsynthetics-for-seleniumide%2Fmaster%2Fpackage.json)]()
 
-## Disclaimer
-New Relic has open-sourced this integration to enable monitoring of this technology. This integration is provided AS-IS WITHOUT WARRANTY OR SUPPORT, although you can report issues and contribute to this integration via GitHub.
+ New Relic Synthetics formatter for Selenium IDE code export.
 
 
 ## How to use ?
